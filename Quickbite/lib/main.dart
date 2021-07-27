@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             import 'package:flutter/material.dart';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 import 'package:flutter/material.dart';
 import 'package:quickbite/constants/colors.dart';
 import 'package:quickbite/screens/landing_screen.dart';
 import 'package:quickbite/screens/login_screen.dart';
@@ -15,6 +15,10 @@ import 'package:quickbite/screens/forgotpassword_screen.dart';
 import 'package:quickbite/screens/newpassword_screen.dart';
 import 'package:quickbite/screens/signup_screen1.dart';
 
+
+import './screens/tab_screen.dart';
+import './screens/home_screen.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -28,6 +32,7 @@ class MyApp extends StatelessWidget {
         print(constraints.maxWidth);
         final customTheme = CustomTheme(constraints);
         return MaterialApp(
+           debugShowCheckedModeBanner: false,
           title: 'QuickBite',
           theme: ThemeData(
             primarySwatch: Colors.orange,
@@ -37,6 +42,7 @@ class MyApp extends StatelessWidget {
           ),
           home: LandingScreen(),
           //application routes
+          
           routes: {
         Introscreen.routeName: (context) => Introscreen(),
         Onboarding1.routeName: (context) => Onboarding1(),
@@ -47,7 +53,7 @@ class MyApp extends StatelessWidget {
         SendOTPScreen.routeName: (context) => SendOTPScreen(),
         NewPwScreen.routeName: (context) => NewPwScreen(),
         SignupScreen1.routeName: (context) => SignupScreen1(),
-
+        TabScreen.routeName: (context) => TabScreen(),
 
           }
         );

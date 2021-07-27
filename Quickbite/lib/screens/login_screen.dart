@@ -4,6 +4,8 @@ import 'package:quickbite/utils/screen_utils.dart';
 import '../widgets/customTextInput.dart';
 import '../screens/signup_screen.dart';
 import '../screens/forgotpassword_screen.dart';
+import 'home_screen.dart';
+import '../screens/tab_screen.dart';
 
 
 
@@ -23,8 +25,26 @@ class LoginScreen extends StatelessWidget {
                 horizontal: 40,
                 vertical: 30,
               ),
+              
               child: Column(
                 children: [
+                   Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                TextButton(
+                  onPressed: (){},
+                   child: Text('Back',
+                   
+                     style: Theme.of(context).textTheme.headline4.copyWith(
+                      color: kTextColor,
+                       
+                  ),),
+                   ),
+                    SizedBox(
+              height: getProportionateScreenHeight(30),
+            ),
+              ],
+            ),
                   Text(
                     "Login",
                     style: Theme.of(context).textTheme.headline3.copyWith(
@@ -47,7 +67,11 @@ class LoginScreen extends StatelessWidget {
                     height: 50,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                                   Navigator.of(context)
+                          .pushReplacementNamed(TabScreen.routeName);
+         
+                      },
                       child: Text("Login",
                       ),
                     ),

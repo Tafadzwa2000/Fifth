@@ -35,7 +35,7 @@ class SignupScreen extends StatelessWidget{
                 
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                     Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -55,46 +55,46 @@ class SignupScreen extends StatelessWidget{
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: 30,
+                height: getProportionateScreenHeight(20),
                 ),
                 CustomTextInput(hintText: "Enter your Firstname"),
                 SizedBox(
-                  height: 20,
+                  height: getProportionateScreenHeight(20),
                 ),
                 CustomTextInput(
                   hintText: "Enter your Lastname",
                 ),
                  SizedBox(
-                  height: 20,
+                  height: getProportionateScreenHeight(20),
                 ),
                 CustomTextInput(
                   hintText: "Enter your Email Address",
                 ),
                  SizedBox(
-                  height: 20,
+                  height: getProportionateScreenHeight(20),
                 ),
                 CustomTextInput(
                   hintText: "Enter your Phone Number",
                 ),
                 
                 SizedBox(
-                  height: 20,
+                height: getProportionateScreenHeight(20),
                 ),
                  CustomTextInput(
                   hintText: "Create Password",
                 ),
                 
                 SizedBox(
-                  height: 20,
+                height: getProportionateScreenHeight(20),
                 ), CustomTextInput(
                   hintText: "Confirm Password",
                 ),
                 
                 SizedBox(
-                  height: 20,
+                height: getProportionateScreenHeight(30),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: getProportionateScreenHeight(50),
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
@@ -105,7 +105,7 @@ class SignupScreen extends StatelessWidget{
                   ),
                   
                 ),
-                 SizedBox(height: 20),
+                 SizedBox(height: getProportionateScreenHeight(20),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
